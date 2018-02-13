@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="js" ng-app="myStrings">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Software Cake</title>
+
+		<!-- Stylesheets -->
+
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/ionicons.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="icon" href="assets/cake.png"/>
+		
+		<script type="text/javascript" src="js/angular.min.js"></script>
+		<script type="text/javascript" src="js/strings.js"></script>
+	</head>
+
+	<body>
+		<div id="preloader" ng-controller="StringController"></div>
+
+		<section id="video-wrap" class="framedClear" focus>
+			<div id="gifIndex-background"> 
+				<img src="assets/futuristic-gif-7.gif" style="width:100%; height:100%"/>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12" autofocus="autofocus">
+						<div class="logo text-center wow fadeInDown">
+							<a href="#"><img src="assets/software.PNG" alt="Software Cake" style="width:50%;"></a>
+						</div>
+					</div>
+				</div>
+				<div class="row" style="margin:0;">
+					<div class="col-md-7 wow fadeInLeft" style="z-index: 9999;margin:0">
+						<div class="headline-wrap" style="margin:0;">
+							<h1 class="headline">
+							This is how we
+							<br>
+							<span class="quotes">Dare to know</span>
+							<span class="quotes">Dare to be wise</span>
+							<span class="quotes">Dare to think for yourself</span>
+							<span class="quotes">Dare to create</span>
+							<span class="quotes">Dare to imagine</span>
+							<span class="quotes">Dare to be Amazing</span>
+							<span class="quotes">Sapere aude</span>
+							<br>
+							Are you ready to Know?
+							</h1>
+							<form role="form" id="subscribe-form" style="margin:0;">
+								<div class="form-group col-xs-2 push-btn-left" style="margin:0;">
+									<a href="app.html">
+										<input id="subscribe-button" type="button" class="btn btn-default mc-btn neonBtn" value="Get Started"/>
+									</a>									
+								</div>
+							</form>
+							<h1 class="headline" style="margin-top:6em; margin-right:-2em">
+							Or do you need to know more?
+							</h1>
+							<div class="arrow-down text-center">
+								<a href="#nav-menu" class="wow bounce" data-wow-duration="4s" data-wow-delay="1s" data-wow-iteration="1000"><i class="ion-chevron-down"></i></a>
+							</div>
+							<!-- SUCCESS OR ERROR MESSAGES -->
+            				<div id="subscription-response"></div>
+						</div>
+					</div>
+					<div class="col-md-5  wow fadeInRight framedLight" style="margin-top:40px;">
+						<h1>
+							Site Information
+						</h1>
+						<p ng-controller="StringController">
+							Today's Date: {{today | date : 'EEEE MM/dd/yyyy'}} 
+						</p>
+						<h1>
+							Current Available Software 
+						</h1>
+						<p>
+							AMIS: Version 1.0.0 Elias AMIS
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section>
+			<nav id="nav-menu" class="navbar nav-layla" role="navigation">
+
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".main-nav">
+						<i class="ion-navicon"></i>
+					</button>
+					<a class="navbar-brand" href="#">Software Cake</a>
+				</div>
+
+				<div class="collapse navbar-collapse main-nav framedClear">
+					<ul class="nav navbar-nav navbar-right">						
+						<li><a href="#video-wrap">No More Questions</a><span class="hover-li"></span></li>
+						<li><a>/</a><span class="hover-li"></span></li>
+						<li><a href="#contact">I Want More</a><span class="hover-li"></span></li>
+					</ul>
+				</div>
+			</nav>
+		</section>
+
+		<section id="about" class="framedClear" style="background-image:url('assets/midBack.jpg');background-position:contain;">
+			<div class="container">
+				<div class="row" ng-controller="sliderController">
+					<div class="col-xs-12">
+						<div class="text-center wow zoomIn">
+							<h1>Are You Seeking More?</h1>
+						</div>
+						<div style="float:left; width:60%; padding-left:10px; margin-top:35px; padding-right:10px;" class="framedBlue">
+							<h1>{{sliderH1}}</h1>
+							<p class="flickerText">&Tab;{{sliderP}}</p>
+							<br/>
+							<p class="flickerText">&Tab;{{sliderP2}}</p>
+						</div>
+						<div class="text-center">
+							<img src="assets/eliasShort.png" class="picFrame" height="700"/>
+						</div>
+					</div>				
+						<div class="text-center">
+							<button class="sliderBtn" ng-click="changeSide1()"></button>
+							<button class="sliderBtn" ng-click="changeSide2()"></button>
+							<button class="sliderBtn" ng-click="changeSide3()"></button>
+						</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" style="background-image:url(assets/bottomBack.jpg); background-position:fill";>
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12">
+						<div class="title text-center wow zoomIn" >
+							<h1 style="border:solid;border-radius:17px; background-color:transparent;">CONTACT US</h1>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-sm-5 wow fadeInLeft framedDark" style="margin-left:20px; margin-right:20px; padding-top:10px">
+						<p>Just Knowing This, is Not Enough. I Have Questions.</p>
+						
+							<div class="row">
+								<div class="col-sm-12 form-group">
+									<input class="inputBox" id="name" name="name" placeholder="Name" type="text" required/>
+								</div>
+								<div class="col-sm-12 form-group">
+									<input class="inputBox" id="email" name="email" placeholder="Email" type="email" required />
+								</div>
+								<div class="col-sm-12 form-group">
+									<textarea class="inputBox" id="message" name="message" placeholder="Message" rows="5"></textarea>
+								</div>
+								<div class="col-sm-12 form-group">
+									<button class="btn btn-default mc-btn" type="submit" style="margin: 0; border-radius:17px; border-color:#3399ff">Then Please Send Them</button>
+								</div>
+							</div>
+						
+					</div>
+
+					<div class="col-sm-6  wow fadeInRight framedDark" style="padding-bottom: 10px;padding-top:10px">
+						<p>If you'd like other means of contacting us. Then these are for you.</p>
+						<div class="social-icons">
+							<ul>
+								<li class="facebook wow fadeInDown" data-wow-delay="1.1s"><a href="#"><i class="ion-social-facebook"></i></a></li>
+								<li class="github wow fadeInDown" data-wow-delay="1.5s"><a href="#"><i class="ion-social-github"></i></a></li>
+								<li class="youtube wow fadeInDown" data-wow-delay="1.7s"><a href="#"><i class="ion-social-youtube"></i></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-sm-6  wow fadeInRight framedDark" style="margin-top: 20px;padding-top:10px">
+						<p>Email: SoftwareCake@live.com</p>
+						<p>Parent Company: BlackFireRose.Tech</p>
+						<p>Site Version: 1.0.0</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-8">
+						<p class="copyright text-left">Copyright © 2018 Software Cake. All rights reserved.</p>
+					</div>
+					<div class="col-sm-4" style="font-size:10px;">
+						<p class="copyright text-right flickerText">Theme by <a href="https://themewagon.com/">ThemeWagon</a></p>
+						<p class="copyright text-right flickerText">Theme Edited by <a href="#">Black Fire Rose .Tech</a></p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+
+		<script src="js/modernizr.custom.js"></script>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/jquery.videoBG.js"></script>
+		<script src="js/jquery.sticky-kit.min.js"></script>
+		<script src="js/wow.min.js"></script>
+		<script src="js/kinetic.js"></script>
+		<script src="js/script.js"></script>
+	</body>
+</html>
