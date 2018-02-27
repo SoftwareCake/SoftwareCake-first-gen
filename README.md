@@ -1,6 +1,6 @@
-#Layla
+#Layla & Software Cake
 
-A Stylish Coming Soon Template for your upcoming business. 
+A Stylish Coming Soon Template for your upcoming business that I used as a portfolio. 
 
 #Features
 
@@ -25,7 +25,7 @@ A Stylish Coming Soon Template for your upcoming business.
 - Easy to use
 - It's Free!
 
-#Screenshot
+#Screenshot of the orginal template
 
 
 ![Screenshot of Flusk]
